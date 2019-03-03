@@ -12,31 +12,46 @@ const styles = theme => ({
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   bottomMargin: {
-    marginBottom: theme.spacing.unit * 2
-  }
+    marginBottom: theme.spacing.unit * 2,
+  },
 });
 
 class InstructionDialog extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <BaseDialog {...this.props} >
+      <BaseDialog {...this.props}>
         <div className={classes.bottomMargin}>
           <Typography variant="body1" gutterBottom>
             This is a sample introduction
           </Typography>
         </div>
-        <Button component={Link} to='/dashboard' className={classes.bottomMargin} variant='contained' onClick={this.handleClose} color="primary" autoFocus>
+        <Button
+          component={Link}
+          to="/dashboard"
+          className={classes.bottomMargin}
+          variant="contained"
+          onClick={this.handleClose}
+          color="primary"
+          autoFocus
+        >
           Getting started
         </Button>
-        <Button component={Link} to='/dashboard' variant='outlined' onClick={this.handleClose} color="primary" autoFocus>
+        <Button
+          component={Link}
+          to="/dashboard"
+          variant="outlined"
+          onClick={this.handleClose}
+          color="primary"
+          autoFocus
+        >
           Dashboard
         </Button>
-      </BaseDialog>   
-    )
+      </BaseDialog>
+    );
   }
 }
 

@@ -52,24 +52,23 @@ const styles = theme => ({
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   stepsContainer: {
     marginLeft: 72,
     textAlign: 'left',
     marginTop: 20,
-    height: 65
+    height: 65,
   },
   bottomMargin: {
-    marginBottom: theme.spacing.unit * 2
-  }
+    marginBottom: theme.spacing.unit * 2,
+  },
 });
 
 class SwipeDialog extends Component {
-
   state = {
-    activeStep: 0
-  }
+    activeStep: 0,
+  };
 
   handleNext = () => {
     this.setState(prevState => ({
@@ -99,7 +98,7 @@ class SwipeDialog extends Component {
           </div>
           <div>
             <AutoPlaySwipeableViews
-              axis='x'
+              axis="x"
               index={activeStep}
               onChangeIndex={this.handleStepChange}
               enableMouseEvents
@@ -107,7 +106,11 @@ class SwipeDialog extends Component {
               {tutorialSteps.map((step, index) => (
                 <div key={step.label}>
                   {Math.abs(activeStep - index) <= 2 ? (
-                    <img className={classes.img} src={step.imgPath} alt={step.label} />
+                    <img
+                      className={classes.img}
+                      src={step.imgPath}
+                      alt={step.label}
+                    />
                   ) : null}
                 </div>
               ))}
@@ -118,19 +121,31 @@ class SwipeDialog extends Component {
               activeStep={activeStep}
               className={classes.mobileStepper}
               nextButton={
-                <Button size="small" onClick={this.handleNext} disabled={activeStep === maxSteps - 1}>
+                <Button
+                  size="small"
+                  onClick={this.handleNext}
+                  disabled={activeStep === maxSteps - 1}
+                >
                   Next
                 </Button>
               }
               backButton={
-                <Button size="small" onClick={this.handleBack} disabled={activeStep === 0}>
+                <Button
+                  size="small"
+                  onClick={this.handleBack}
+                  disabled={activeStep === 0}
+                >
                   Back
                 </Button>
               }
             />
           </div>
           <div className={classes.stepsContainer}>
-            <Typography style={{textTransform: 'uppercase'}} color='secondary' gutterBottom>
+            <Typography
+              style={{ textTransform: 'uppercase' }}
+              color="secondary"
+              gutterBottom
+            >
               {tutorialSteps[activeStep].label}
             </Typography>
             <Typography variant="body1" gutterBottom>
@@ -138,13 +153,20 @@ class SwipeDialog extends Component {
             </Typography>
           </div>
           <div>
-            <Button component={Link} to='/dashboard' variant='contained' onClick={this.handleClose} color="primary" autoFocus>
-                Getting started
+            <Button
+              component={Link}
+              to="/dashboard"
+              variant="contained"
+              onClick={this.handleClose}
+              color="primary"
+              autoFocus
+            >
+              Getting started
             </Button>
           </div>
         </div>
       </BaseDialog>
-    )
+    );
   }
 }
 
