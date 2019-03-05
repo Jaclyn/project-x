@@ -394,11 +394,9 @@ class Dashboard extends React.Component {
                 <div className={classes.topBar}>
                   <div className={classes.block}>
                     <Typography variant="h6" gutterBottom>
-                      Dashboard
+                      Enrollment
                     </Typography>
-                    <Typography variant="body2">
-                      List of transaction.
-                    </Typography>
+                    <Typography variant="body2">List of enrollment.</Typography>
                   </div>
                   <div>
                     <Button

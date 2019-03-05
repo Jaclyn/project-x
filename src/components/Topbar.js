@@ -15,7 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Menu from './Menu';
 
-const logo = require('../images/logo.svg');
+//const logo = require('../images/logo.svg');
 
 const styles = theme => ({
   appBar: {
@@ -97,18 +97,18 @@ class Topbar extends Component {
     if (this.props.currentPath === '/home') {
       return 0;
     }
-    if (this.props.currentPath === '/dashboard') {
+    if (this.props.currentPath === '/customers') {
       return 1;
     }
-    /*if(this.props.currentPath === '/signup') {
-      return 2
-    }*/
+    /* if (this.props.currentPath === '/customers') {
+      return 2;
+    }
     if (this.props.currentPath === '/wizard') {
       return 3;
     }
     if (this.props.currentPath === '/cards') {
       return 4;
-    }
+    }*/
   };
 
   render() {
@@ -122,15 +122,14 @@ class Topbar extends Component {
               <div className={classes.inline}>
                 <Typography variant="h6" color="inherit" noWrap>
                   <Link to="/" className={classes.link}>
-                    <img width={20} src={logo} />
-                    <span className={classes.tagline}>Material Sense</span>
+                    <span className={classes.tagline}>Project X</span>
                   </Link>
                 </Typography>
               </div>
               {!this.props.noTabs && (
                 <React.Fragment>
                   <div className={classes.productLogo}>
-                    <Typography>A material UI Template</Typography>
+                    <Typography />
                   </div>
                   <div className={classes.iconContainer}>
                     <IconButton

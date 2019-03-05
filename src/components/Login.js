@@ -137,9 +137,6 @@ class Login extends Component {
               className={classes.grid}
             >
               <Grid item xs={12}>
-                <div className={classes.logo}>
-                  <img width={100} height={100} src={logo} alt="logo" />
-                </div>
                 <div className={classes.loginContainer}>
                   <div className={classes.loginGrid}>
                     <form>
