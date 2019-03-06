@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, HashRouter, Switch } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import Wizard from './components/Wizard';
-import Cards from './components/Cards';
-import Enrollment from './components/Enrollment';
-import Login from './components/Login';
-import Customers from './components/Customers';
-import ScrollToTop from './components/ScrollTop';
+import Dashboard from './views/Dashboard';
+import Wizard from './views/Wizard';
+import Cards from './views/Cards';
+import Enrollment from './views/Enrollment';
+import Login from './views/Login';
+import Customers from './views/Customers';
+import ScrollToTop from './views/ScrollTop';
 
 export default props => (
   <HashRouter>
